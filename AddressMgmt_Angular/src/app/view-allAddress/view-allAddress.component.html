@@ -1,0 +1,27 @@
+<h1>All Addresses</h1>
+<table border="1">
+  <tr>
+    <th> AddressId</th>
+    <th> RetailerId</th>
+    <th>BuildingNo </th>
+    <th> City </th>
+    <th> State </th>
+    <th> Zip</th>
+    <th> Field </th>
+    <th> Action </th>
+  </tr>
+  <tr *ngFor="let address of allAddress">
+    <td>{{address.addressId}}</td>
+    <td>{{address.retailerId}}</td>
+    <td>{{address.buildingNo}}</td>
+    <td>{{address.city}}</td>
+    <td>{{address.state}}</td>
+    <td>{{address.zip}}</td>
+    <td>{{address.field}}</td>
+    <td>
+      <button (click)="confirmDelete(address)">Delete</button>
+    </td>
+
+  </tr>
+
+</table>

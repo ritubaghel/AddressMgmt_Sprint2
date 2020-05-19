@@ -1,0 +1,29 @@
+ h1
+{ position:relative;
+	left:400px;
+	top:5px;
+	text-decoration:underline;
+	text-shadow:3px 5px 5px white;
+}
+
+form
+{   
+    position:relative;
+	left:400px;
+	top:5px;
+	color:black;
+    font:bold;
+	font-size:15px;
+	text-shadow:3px 5px 5px white;
+}
+
+#addedAddress
+{
+    position:relative;
+	left:400px;
+	top:5px;
+	color:black;
+    font:bold;
+	font-size:15px;
+	text-shadow:3px 5px 5px white;
+} 

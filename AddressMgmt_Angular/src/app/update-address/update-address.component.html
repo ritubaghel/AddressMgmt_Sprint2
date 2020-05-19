@@ -1,0 +1,79 @@
+<h1>Update-Address Form</h1>
+<form #data="ngForm" (ngSubmit)="data.valid && updateAddress(data)">
+    <div>
+        <label>AddressId</label>
+        <br>
+        <input type="text" name="addressId" ngModel #addressIdValueCtrl="ngModel" required>
+        <div *ngIf="addressIdValueCtrl.errors!=null && addressIdValueCtrl.errors.required">
+            AddressId Value is required.
+        </div>
+    </div>
+    <br>
+    <div>
+        <label>RetailerId</label>
+        <br>
+        <input type="text" name="retailerId" ngModel #retailerIdValueCtrl="ngModel" required>
+        <div *ngIf="retailerIdValueCtrl.errors!=null && retailerIdValueCtrl.errors.required">
+            RetailerId Value is required.
+        </div>
+    </div>
+    <br>
+    <div>
+        <label>City</label>
+        <br>
+        <input type="text" name="city" ngModel #cityValueCtrl="ngModel" required>
+        <div *ngIf="cityValueCtrl.errors!=null && cityValueCtrl.errors.required">
+            City Value is required.
+        </div>
+    </div>
+    <br>
+    <div>
+        <label>State</label>
+        <br>
+        <input type="text" name="state" ngModel #stateValueCtrl="ngModel" required>
+        <div *ngIf="stateValueCtrl.errors!=null && stateValueCtrl.errors.required">
+            State Value is required.
+        </div>
+    </div>
+    <br>
+    <div>
+        <label>Zip</label>
+        <br>
+        <input type="text" name="zip" ngModel #zipValueCtrl="ngModel" required minlength="6">
+        <div *ngIf="zipValueCtrl.errors!=null && zipValueCtrl.errors.required">
+            Zip Value is required.
+        </div>
+    </div>
+    <br>
+    <div>
+        <label>Field</label>
+        <br>
+        <input type="text" name="field" ngModel #fieldValueCtrl="ngModel" required>
+        <div *ngIf="fieldValueCtrl.errors!=null && fieldValueCtrl.errors.required">
+            Field Value is required.
+        </div>
+    </div>
+    <br>
+
+    <input type="submit" value="Update Address" />
+</form>
+
+<div id="updatedAddress" *ngIf="errMsg ==null && updatedAddress!=null">
+    <h3>Address updated Successfully</h3>
+    addressId = {{updatedAddress.addressId}}
+    <br>
+    retailerId = {{updatedAddress.retailerId}}
+    <br>
+    city = {{updatedAddress.city}}
+    <br>
+    state = {{updatedAddress.state}}
+    <br>
+    zip = {{updatedAddress.zip}}
+    <br>
+    field = {{updatedAddress.field}}
+    <br>
+</div>
+<div id="updatedAddress" *ngIf="errMsg !== null">
+    <h3>{{errMsg}}
+    </h3>
+</div>
